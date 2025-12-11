@@ -1,0 +1,40 @@
+:root {
+	--c-purple: #0d0c1d;
+	--c-cyan: #00ffff;
+	--c-green: #39ff14;
+	--c-pink: #ff10f0;
+	--c-dark: #16152b;
+	--c-critical: #ff2d55;
+
+	--text-blue: #00ffff99;
+
+	--bg-green: #39ff1433;
+	--bg-critical: #ff2d5533;
+	--bg-blue: #00ffff38;
+
+	--bg-blue-hover: #00ffff3a;
+	--bg-green-hover: #39ff141a;
+	--bg-critical-hover: #ff2d551a;
+	--content-bg: #16152b;
+	--font: 'Share Tech Mono', monospace;
+
+	--shadow-color: #00ffff1a;
+	--shadow-colored: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
+
+	--blue-border: #00ffff33;
+
+	--border-radius: 0.5rem;
+
+	--map-overlay-color: linear-gradient(
+		45deg,
+		rgba(0, 255, 255, 0.15) 0%,
+		rgba(0, 100, 255, 0.1) 50%,
+		rgba(0, 255, 255, 0.15) 100%
+	);
+	--map-filter: saturate(150%) hue-rotate(180deg) brightness(1.1);
+
+	--background: var(--c-purple);
+	--surface: var(--c-dark);
+	--text-primary: #e4e6f2;
+	--text-muted: #a5aac7;
+}

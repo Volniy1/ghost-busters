@@ -1,0 +1,39 @@
+.container {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1.5rem;
+	height: 100vh;
+}
+.threat_feed {
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
+	height: 100%;
+	width: 100%;
+	max-width: 40%;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--shadow-color);
+
+	background-color: var(--content-bg);
+}
+.threat_header {
+	display: flex;
+	justify-content: flex-start;
+	padding: 1rem;
+	border-bottom: 1px solid var(--shadow-color);
+	border-radius: var(--border-radius);
+}
+.threat_list {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	gap: 10px;
+}
+
+.title {
+	color: var(--c-cyan);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.5rem;
+}

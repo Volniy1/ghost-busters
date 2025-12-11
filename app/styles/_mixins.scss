@@ -1,0 +1,3 @@
+@mixin trn($prop: all, $duration: 0.15s, $easing: ease-in-out) {
+	transition: $prop $duration $easing;
+}

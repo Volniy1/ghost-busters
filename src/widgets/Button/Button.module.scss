@@ -1,0 +1,35 @@
+@use '@styles/mixins';
+
+.button {
+	font-weight: 700;
+	font-size: 16px;
+	padding: 0.5rem 1rem;
+	text-transform: uppercase;
+
+	background: none;
+	cursor: pointer;
+
+	color: var(--c-cyan);
+	border: 1px solid var(--blue-border);
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 5px var(--shadow-color), 0 0 10px var(--shadow-color);
+
+	&:hover {
+		box-shadow: 0 0 5px var(--c-cyan), 0 0 10px var(--c-cyan);
+		background-color: var(--bg-blue-hover);
+	}
+
+	@include mixins.trn;
+}
+
+.submit {
+	color: var(--c-critical);
+	border: 1px solid var(--c-critical);
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 5px var(--bg-critical-hover), 0 0 10px var(--bg-critical-hover);
+
+	&:hover {
+		box-shadow: 0 0 5px var(--c-critical), 0 0 10px var(--c-critical);
+		background-color: var(--bg-critical-hover);
+	}
+}

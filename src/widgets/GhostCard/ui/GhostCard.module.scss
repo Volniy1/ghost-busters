@@ -1,0 +1,79 @@
+@use '@styles/mixins';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 1rem;
+
+	border: 1px;
+	border-radius: var(--border-radius);
+
+	// threat === low
+	border-color: var(--c-green);
+	box-shadow: 0 0 5px var(--c-green), 0 0 10px var(--c-green);
+
+	cursor: pointer;
+	user-select: none;
+
+	.card_title {
+		color: var(--c-green);
+	}
+
+	.card_threat {
+		color: var(--c-green);
+		border-color: var(--c-green);
+		background-color: var(--bg-green);
+	}
+
+	&:hover {
+		background-color: var(--bg-green-hover);
+	}
+
+	@include mixins.trn;
+}
+
+.critical {
+	border-color: var(--c-critical);
+	box-shadow: 0 0 5px var(--c-critical), 0 0 10px var(--c-critical);
+
+	.card_title {
+		color: var(--c-critical);
+	}
+
+	.card_threat {
+		color: var(--c-critical);
+		border-color: var(--c-critical);
+		background-color: var(--bg-critical);
+	}
+
+	&:hover {
+		background-color: var(--bg-critical-hover);
+	}
+}
+
+.card_head {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card_title {
+}
+
+.card_threat {
+	padding: 1px 5px;
+	border-radius: 0.5rem;
+	text-transform: uppercase;
+}
+
+.card_content {
+	display: flex;
+	justify-content: space-between;
+	color: var(--text-blue);
+}
+
+.card_location {
+}
+
+.card_status {
+}
