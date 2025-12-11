@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+
 import s from './Button.module.scss'
 
 interface IButton {
@@ -8,7 +9,7 @@ interface IButton {
 	disabled?: boolean
 }
 
-export default function Button({ label, type = 'default', disabled = false, onClick }: IButton) {
+export function Button({ label, type = 'default', disabled = false, onClick }: IButton) {
 	return (
 		<button
 			className={clsx(s.button, type === 'submit' && s.submit)}

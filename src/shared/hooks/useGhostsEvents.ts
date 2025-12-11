@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
+
 import { Ghost } from '@shared/lib/zod/schemas'
 
 export function useGhostEvents() {

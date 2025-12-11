@@ -1,4 +1,5 @@
-import Button from '@widgets/Button'
+import { Button } from '@widgets/Button'
+
 import s from './ErrorScreen.module.scss'
 
 interface ILoadingScreen {

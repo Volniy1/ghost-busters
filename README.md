@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ghost-busters project
+
+## RU
+
+SPA на базе Next.js (App Router) для мониторинга аномалий (духов) в реальном времени.
 
 ## Getting Started
 
@@ -28,6 +32,58 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Docker
+
+This project includes Docker support for containerized deployment.
+
+### Using Docker Compose (Recommended)
+
+The easiest way to run the application with Docker:
+
+```bash
+docker-compose up --build
+```
+
+This will build the Docker image and start the container. The application will be available at [http://localhost:3000](http://localhost:3000).
+
+To run in detached mode:
+
+```bash
+docker-compose up -d --build
+```
+
+To stop the container:
+
+```bash
+docker-compose down
+```
+
+### Using Dockerfile Directly
+
+Build the Docker image:
+
+```bash
+docker build -t ghost-busters:latest .
+```
+
+Run the container:
+
+```bash
+docker run -p 3000:3000 ghost-busters:latest
+```
+
+The application will be available at [http://localhost:3000](http://localhost:3000).
+
+### Docker Image Details
+
+The Dockerfile uses a multi-stage build process:
+
+- **Stage 1 (deps)**: Installs dependencies
+- **Stage 2 (builder)**: Builds the Next.js application
+- **Stage 3 (runner)**: Creates a minimal production image with only necessary files
+
+The final image runs as a non-root user (`nextjs`) for security and uses Next.js standalone output mode for optimal performance.
 
 ## Deploy on Vercel
 

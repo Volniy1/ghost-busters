@@ -1,8 +1,10 @@
-import { IGhost } from '@pages/MonitoringPage/ui/MonitoringPage'
-import s from './GhostModal.module.scss'
-import clsx from 'clsx'
 import { useRef } from 'react'
-import Button from '@widgets/Button'
+import clsx from 'clsx'
+
+import { IGhost } from '@entities/ghost'
+import { Button } from '@widgets/Button'
+
+import s from './GhostModal.module.scss'
 
 interface IGhostModal {
 	className?: string

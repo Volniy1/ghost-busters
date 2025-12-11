@@ -1,6 +1,8 @@
-import { IGhost } from '@pages/MonitoringPage/ui/MonitoringPage'
-import s from './GhostCard.module.scss'
 import clsx from 'clsx'
+
+import { IGhost } from '@entities/ghost'
+
+import s from './GhostCard.module.scss'
 
 interface IGhostCard {
 	className?: string

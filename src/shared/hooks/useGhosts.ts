@@ -1,6 +1,7 @@
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+
 import { ghostsApi } from '@shared/api/ghosts'
 import { captureGhostRequest, Ghost } from '@shared/lib/zod/schemas'
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 
 export function useGhosts() {
 	return useQuery({

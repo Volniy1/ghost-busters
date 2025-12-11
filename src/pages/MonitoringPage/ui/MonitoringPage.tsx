@@ -3,23 +3,15 @@
 import { useState } from 'react'
 import clsx from 'clsx'
 
+import { IGhost } from '@entities/ghost'
+import { ErrorScreen } from '@widgets/ErrorScreen'
 import { GhostCard } from '@widgets/GhostCard'
 import { GhostModal } from '@widgets/GhostModal'
-
 import { LoadingScreen } from '@widgets/LoadingScreen'
-import { ErrorScreen } from '@widgets/ErrorScreen'
 import { useCaptureGhost, useGhosts } from '@shared/hooks/useGhosts'
 import { useGhostEvents } from '@shared/hooks/useGhostsEvents'
 
 import s from './MonitoringPage.module.scss'
-
-export interface IGhost {
-	name: string
-	location: string
-	threat: 'critical' | 'low'
-	status: 'contained' | 'active'
-	id?: string
-}
 
 export function MonitoringPage() {
 	const { data: ghosts = [], isLoading, error } = useGhosts()
