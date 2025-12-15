@@ -3,11 +3,12 @@
 	justify-content: flex-end;
 	padding: 1.5rem;
 	height: 100vh;
+	gap: 2rem;
 }
 .threat_feed {
 	display: flex;
 	flex-direction: column;
-	box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
+	box-shadow: 0 0px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
 	height: 100%;
 	width: 100%;
 	max-width: 40%;

@@ -1,0 +1,50 @@
+.map {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	overflow: hidden;
+
+	border: 1px solid var(--text-blue);
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 15px var(--bg-blue-hover), inset 0 0 10px var(--bg-blue-hover);
+
+	background: url('/images/city.jpg') center / cover no-repeat;
+	filter: var(--map-filter);
+
+	::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--map-overlay-bg);
+		opacity: 0.5;
+		border-radius: var(--border-radius);
+		z-index: 1;
+	}
+
+	::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--map-bg);
+
+		z-index: 0;
+		opacity: 0.5;
+		animation: glitch-scan 8s linear infinite;
+	}
+}
+
+@keyframes glitch-scan {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}

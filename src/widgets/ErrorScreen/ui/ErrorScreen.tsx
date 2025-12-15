@@ -12,7 +12,7 @@ export function ErrorScreen({ onClick, error }: ILoadingScreen) {
 		<div className={s.modal}>
 			<div className={s.container}>
 				<span className={s.error}>{error ?? 'Error'}</span>
-				<Button type="submit" label="Restart" onClick={() => window.location.reload()} />
+				<Button type="submit" label="Return" onClick={() => window.location.reload()} />
 			</div>
 		</div>
 	)

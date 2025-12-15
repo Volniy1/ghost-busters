@@ -25,11 +25,18 @@
 
 	--border-radius: 0.5rem;
 
-	--map-overlay-color: linear-gradient(
+	--map-bg: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 2px,
+		rgba(0, 255, 255, 0.08) 2px,
+		rgba(0, 255, 255, 0.08) 4px
+	);
+	--map-overlay-bg: linear-gradient(
 		45deg,
-		rgba(0, 255, 255, 0.15) 0%,
-		rgba(0, 100, 255, 0.1) 50%,
-		rgba(0, 255, 255, 0.15) 100%
+		rgba(0, 255, 255, 0.055) 0%,
+		rgba(0, 255, 255, 0.015) 50%,
+		rgba(0, 255, 255, 0.055) 100%
 	);
 	--map-filter: saturate(150%) hue-rotate(180deg) brightness(1.1);
 

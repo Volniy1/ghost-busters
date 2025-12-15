@@ -10,6 +10,7 @@ import { GhostModal } from '@widgets/GhostModal'
 import { LoadingScreen } from '@widgets/LoadingScreen'
 import { useCaptureGhost, useGhosts } from '@shared/hooks/useGhosts'
 import { useGhostEvents } from '@shared/hooks/useGhostsEvents'
+import { GhostMap } from '@widgets/GhostMap'
 
 import s from './MonitoringPage.module.scss'
 
@@ -48,7 +49,8 @@ export function MonitoringPage() {
 	}
 
 	return (
-		<div className={`${s.container}`}>
+		<main className={`${s.container}`}>
+			<GhostMap ghosts={ghosts.filter((g) => g.status !== 'contained')} />
 			{captureMutation.isError && <ErrorScreen error={(captureMutation.error as Error)?.message} />}
 			{captureMutation.isPending && <LoadingScreen />}
 			{selectedGhost && (
@@ -69,6 +71,6 @@ export function MonitoringPage() {
 						))}
 				</div>
 			</div>
-		</div>
+		</main>
 	)
 }
