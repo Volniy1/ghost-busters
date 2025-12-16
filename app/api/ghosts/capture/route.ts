@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 			return NextResponse.json({ success: false, message: 'Ghost not found' }, { status: 404 })
 		}
 
-		// Simulate 30% failure rate
+		// 30%
 		const shouldFail = Math.random() < 0.3
 
 		if (shouldFail) {
