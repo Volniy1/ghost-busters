@@ -1,5 +1,6 @@
 :root {
 	--c-purple: #0d0c1d;
+	--c-blue: #6495ed;
 	--c-cyan: #00ffff;
 	--c-green: #39ff14;
 	--c-pink: #ff10f0;
@@ -35,7 +36,7 @@
 	--map-overlay-bg: linear-gradient(
 		45deg,
 		rgba(0, 255, 255, 0.055) 0%,
-		rgba(0, 255, 255, 0.015) 50%,
+		rgba(0, 0, 0, 0.116) 50%,
 		rgba(0, 255, 255, 0.055) 100%
 	);
 	--map-filter: saturate(150%) hue-rotate(180deg) brightness(1.1);

@@ -3,7 +3,7 @@ import { Button } from '@widgets/Button'
 import s from './ErrorScreen.module.scss'
 
 interface ILoadingScreen {
-	onClick?: () => void
+	onClick: () => void
 	error?: string
 }
 
@@ -12,7 +12,7 @@ export function ErrorScreen({ onClick, error }: ILoadingScreen) {
 		<div className={s.modal}>
 			<div className={s.container}>
 				<span className={s.error}>{error ?? 'Error'}</span>
-				<Button type="submit" label="Return" onClick={() => window.location.reload()} />
+				<Button type="submit" label="Return" onClick={() => onClick()} />
 			</div>
 		</div>
 	)

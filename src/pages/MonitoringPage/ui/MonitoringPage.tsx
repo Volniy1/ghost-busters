@@ -45,13 +45,21 @@ export function MonitoringPage() {
 	}
 
 	if (error) {
-		return <ErrorScreen />
+		return <ErrorScreen onClick={() => window.location.reload()} />
 	}
 
 	return (
 		<main className={`${s.container}`}>
-			<GhostMap ghosts={ghosts.filter((g) => g.status !== 'contained')} />
-			{captureMutation.isError && <ErrorScreen error={(captureMutation.error as Error)?.message} />}
+			<GhostMap
+				ghosts={ghosts.filter((g) => g.status !== 'contained')}
+				onSelect={setSelectedGhost}
+			/>
+			{captureMutation.isError && (
+				<ErrorScreen
+					error={(captureMutation.error as Error)?.message}
+					onClick={() => window.location.reload()}
+				/>
+			)}
 			{captureMutation.isPending && <LoadingScreen />}
 			{selectedGhost && (
 				<GhostModal

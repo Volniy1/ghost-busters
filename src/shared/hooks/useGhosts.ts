@@ -28,7 +28,7 @@ export function useCaptureGhost() {
 						ghost.name === newCapture.name ? { ...ghost, status: 'contained' as const } : ghost
 					)
 				)
-				console.log(queryClient.getQueryData(['ghosts']))
+				// console.log(queryClient.getQueryData(['ghosts']))
 			}
 
 			return { previousGhosts }

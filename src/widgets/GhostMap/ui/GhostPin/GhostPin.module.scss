@@ -1,0 +1,47 @@
+@use '@styles/mixins';
+
+.pin {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 42px;
+	height: 42px;
+	background: none;
+	border-radius: var(--border-radius);
+	border: none;
+
+	font-size: 42px;
+	color: var(--c-blue);
+
+	cursor: pointer;
+	overflow: hidden;
+
+	@include mixins.trn;
+
+	&:hover {
+		color: var(--text-blue);
+		background-color: var(--bg-blue-hover);
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0.5;
+			background-color: var(--bg-blue-hover);
+			animation: glitch-scan 0.8s linear infinite;
+		}
+	}
+}
+
+@keyframes glitch-scan {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
